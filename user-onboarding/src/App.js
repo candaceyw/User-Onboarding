@@ -1,11 +1,12 @@
 import React from 'react';
 import FormikUserForm from './Components/UserForm';
-import './App.css';
+import './output.css';
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Testing</h1>
       <FormikUserForm  user="name"/>
     </div>
   );

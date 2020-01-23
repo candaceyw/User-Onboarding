@@ -10,7 +10,11 @@
     "formik": "^2.1.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-google-invisible-recaptcha": "^0.2.11",
+    "react-recaptcha-google": "^1.1.1",
+    "react-recaptcha-hook": "^1.0.9",
     "react-scripts": "3.3.0",
+    "sass": "^1.25.0",
     "yup": "^0.28.0"
   },
   "scripts": {
