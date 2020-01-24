@@ -26,7 +26,8 @@ function validateEmail(value) {
 
 
 
-const UserForm = ({ errors, touched, values, status }) => {
+const UserForm = ({ errors, touched, values, status, isSubmitting }) => {
+   
     const [user, setUser] = useState([])
    
     useEffect(() => {
@@ -50,13 +51,21 @@ const UserForm = ({ errors, touched, values, status }) => {
 
                 <div className="roleWrapper">
                 <label className="roleDropdown" htmlFor="select" ><p>Role: </p></label>
-                <Field as="select" name="role" placeholder="Select a Role Below">
+                <Field as="select" name="role" value={values.role} placeholder="Select a Role Below" className="select-css">
+                    <option value="" selected="value" disabled>Select Option</option>
                     <option value="Developer">Developer</option>
                     <option value="Designer">Designer</option>
                     <option value="Engineer">Engineer</option>
                     <option value="Manager">Manager</option>
                     <option value="Other">Other</option>
                  </Field>
+            
+
+        {errors.role &&
+            touched.role &&
+            <div className="input-feedback">
+              {errors.role}
+            </div>}
                  </div>
                  
                 <Field type="text" name="password" placeholder="Password"  value={values.password}/>
@@ -67,7 +76,7 @@ const UserForm = ({ errors, touched, values, status }) => {
                     <label className="termsCheckbox" htmlFor="checkbox" ><p>Agree to Terms</p></label>
                     </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={isSubmitting}>Submit</button>
             </Form>
             {
                 user.map(user => (
@@ -92,7 +101,7 @@ const FormikUserForm = withFormik({
     validationSchema: Yup.object().shape({
         name: Yup.string().required('Name Required'),
         email: Yup.string().required('Please enter a valid email address'),
-        role: Yup.string(),
+        role: Yup.string().required('Please select a role'),
         password: Yup.string().required('Password Required'),
         terms: Yup.bool('true').required('Must Agree to Terms')
 
