@@ -1,0 +1,109 @@
+body {  background-image: url('./images/iStock-1026914886.jpg')
+}
+
+.formWrapper {
+    background-color: white;
+    width: 40%;
+    margin: 30px auto;
+    padding: 2%;
+    border-radius: 10px;
+
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 6px 8px rgba(0,0,0,0.11),
+    0 8px 16px rgba(74, 41, 41, 0.11);
+
+}
+
+.userForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+        input{
+            margin: 1%;
+            width: 60%;
+            height: 60px;
+        
+        }
+}
+
+.roleWrapper {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+
+    p{
+        margin-right: 10px;
+    }
+}
+
+select {
+    width: 50%;
+}
+
+.checkBoxWrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+input[type=checkbox] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+    width: auto;
+
+}
+
+label.termsCheckbox {
+    width: 100%;
+
+    p {
+        margin-left: 10px;
+        width: 100%;
+    }
+}
+
+::-webkit-input-placeholder { 
+    font-size: medium;
+    padding: 10px;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+select.select-css {
+    width: 120%;
+    height: 30px;
+    padding:10px 8px 10px 14px; 
+    font-size: 15px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+}
+
+button {
+    width: 120px;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1.2rem;
+   
+}
+
+
+button:hover,
+button:focus {
+    background: #fe611e;
+    color: white;
+}
